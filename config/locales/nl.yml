@@ -1,0 +1,52 @@
+nl: 
+  hello: "Hallo"
+  
+  users: 
+    index:
+      add_user: "Voeg gebruiker toe"
+
+  # activerecord:
+  #   errors:
+  #     messages:
+  #       blank: "kan niet leeg zijn"
+  #       taken: "is al bezet"
+  #       too_short: "es demasiado corto (mínimo %{count} caracteres)"
+  #       invalid: "is ongeldig"
+  #       not_a_number: "is geen getal"
+
+  activerecord: 
+    errors:
+      # The default format to use in full error messages.
+      format: "%{attribute} %{message}"
+      # The values :model, :attribute and :value are always available for interpolation
+      # The value :count is available when applicable. Can be used for pluralization.
+      messages:
+        model_invalid: "Validatie mislukt: %{errors}"
+        inclusion: "staat niet op de lijst"
+        exclusion: "is gereserveerd"
+        invalid: "is ongeldig" 
+        confirmation: "komt niet overeen met %{attribute}"
+        accepted: "moet worden geaccepteerd"
+        empty: "can't be empty"
+        blank: "kan niet leeg zijn"
+        present: "moet leeg zijn"
+        too_long:
+          one: "is te lang (maximum is 10 tekens)"
+          other: "is te lang (maximum is %{count} tekens)"
+        too_short:
+          one: "is te kort (minimaal 1 teken)"
+          other: "is te kort (minimum is %{count} tekens)"
+        wrong_length:
+          one: "is the wrong length (should be 1 character)"
+          other: "is the wrong length (should be %{count} characters)"
+        not_a_number: "is geen getal"
+        not_an_integer: "moet een geheel getal zijn"  
+        greater_than: "must be greater than %{count}"
+        greater_than_or_equal_to: "must be greater than or equal to %{count}"
+        equal_to: "must be equal to %{count}"
+        less_than: "must be less than %{count}"
+        less_than_or_equal_to: "must be less than or equal to %{count}"
+        other_than: "must be other than %{count}"
+        in: "moet in %{count} zijn"
+        odd: "must be odd"
+        even: "must be even"

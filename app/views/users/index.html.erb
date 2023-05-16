@@ -1,0 +1,39 @@
+<div class="container text-center">
+<h2> <%= t(:hello)%> Users </h2>
+	<div class="row justify-content-md-center">
+		<%= link_to "#{t '.add_user' }", new_user_path(locale: I18n.locale) %>
+		<div class="col">
+			<table class="table table-striped">
+				<thead>
+					<tr>  
+						<th scope="col"> Id </th>
+						<th scope="col"> Name </th>
+						<th scope="col"> Email </th>
+						<th scope="col"> Contact </th>
+						<th scope="col"> Age </th>
+						<th scope="col"> Action </th>     
+					</tr>
+				</thead>
+
+				<tbody>
+					<% @users.each do |user|  %>
+						<tr>
+							<td> <%= user.id %> </td>
+							<td> <%= user.name %> </td>
+							<td> <%= user.email %> </td>
+							<td> <%= user.contact %> </td>
+							<td> <%= user.age %> </td>
+							<td> <%= link_to 'Delete', user_path(locale: I18n.locale, id: user),
+								data: { 
+									turbo_method: :delete, 
+									turbo_confirm: "Confirmation for delete the user"
+									} ,
+									class: "btn btn-primary" %> 
+							</td> 
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
