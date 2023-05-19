@@ -1,0 +1,69 @@
+nl: 
+  hello: "Hallo"
+  add_user: "Voeg gebruiker toe"
+  id: "ID kaart"
+  name: "Naam"
+  email: "E-mail"
+  contact: "Contact"
+  age: "Leeftijd"
+  action: "Actie"
+  delete: "Verwijder gebruiker"
+  insert: "Invoegen"
+  change_language: "Wijzigen in Engels"
+
+  users: 
+    index:
+      add_user: "Voeg gebruiker toe"
+     
+
+  # activerecord:
+  #   errors:
+  #     messages:
+  #       blank: "kan niet leeg zijn"
+  #       taken: "is al bezet"
+  #       too_short: "es demasiado corto (mínimo %{count} caracteres)"
+  #       invalid: "is ongeldig"
+  #       not_a_number: "is geen getal"
+
+  activerecord: 
+    attributes:
+      user:
+        name: "Naam"
+        email: "E-mail"
+        contact: "Contact"
+        age: "Leeftijd"
+    errors:
+      # The default format to use in full error messages.
+      format: "%{attribute} %{message}"
+      # The values :model, :attribute and :value are always available for interpolation
+      # The value :count is available when applicable. Can be used for pluralization.
+      messages:
+        model_invalid: "Validatie mislukt: %{errors}"
+        inclusion: "staat niet op de lijst"
+        exclusion: "is gereserveerd"
+        invalid: "is ongeldig" 
+        confirmation: "komt niet overeen met %{attribute}"
+        accepted: "moet worden geaccepteerd"
+        empty: "kan niet leeg zijn"
+        blank: "kan niet leeg zijn"
+        present: "moet leeg zijn"
+        too_long:
+          one: "is te lang (maximum is 10 tekens)"
+          other: "is te lang (maximum is %{count} tekens)"
+        too_short:
+          one: "is te kort (minimaal 1 teken)"
+          other: "is te kort (minimum is %{count} tekens)"
+        wrong_length:
+          one: "is de verkeerde lengte (moet 1 teken zijn)"
+          other: "is de verkeerde lengte (moet %{count} tekens zijn)"
+        not_a_number: "is geen getal"
+        not_an_integer: "moet een geheel getal zijn"  
+        greater_than: "moet groter zijn dan %{count}"
+        greater_than_or_equal_to: "moet groter zijn dan of gelijk zijn aan %{count}"
+        equal_to: "moet gelijk zijn aan %{count}"
+        less_than: "moet kleiner zijn dan %{count}"
+        less_than_or_equal_to: "moet kleiner zijn dan of gelijk zijn aan %{count}"
+        other_than: "moet anders zijn dan %{count}"
+        in: "moet in %{count} zijn"
+        odd: "moet vreemd zijn"
+        even: "moet gelijk zijn"

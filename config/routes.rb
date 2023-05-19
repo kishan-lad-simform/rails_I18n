@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root 'users#index'
+  get '/language', to: "users#change_language"
+  scope "(:locale)", locale: /en|nl/ do
+    resources :users, only: [ :new, :create, :index, :destroy ]
+  end
+  # scope "(:locale)", locale: /en|nl/ do
+  #   resources :books
+  # end
 end

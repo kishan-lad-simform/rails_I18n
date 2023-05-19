@@ -1,0 +1,44 @@
+class UsersController < ApplicationController
+  def index
+    @users = User.all
+  end
+
+  def new 
+    @user = User.new
+  end
+
+  def create
+    @user = User.new(user_params)
+    if @user.save
+      redirect_to root_path
+    else
+      render :new, status: 422
+    end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to root_path
+  end
+
+  def change_language
+    if cookies[:locale].eql?("en")
+      cookies[:locale] = "nl" 
+    else
+      cookies[:locale] = "en"  
+    end
+    redirect_to root_path
+  end
+
+  private
+    def user_params
+      params.require(:user).permit( 
+        :name,
+        :contact,
+        :email,
+        :age 
+      )
+    end
+
+end
