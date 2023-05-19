@@ -31,22 +31,25 @@
 
 en:
   hello: "Hello"
+  add_user: "Add User"
   welcome: "Welcome"
- 
-  users: 
-    index:
-      add_user: "Add User"
-
-  # activerecord:
-  #   errors:
-  #     messages:
-  #       blank: "can't be blank"
-  #       taken: "has already been taken"
-  #       invalid: "is invalid"
-  #       too_short: "is the wrong length (should be %{count} characters)"
-  #       not_a_number: "is not a number"
+  id: "Id"
+  name: "Name"
+  email: "Email"
+  contact: "Contact"
+  age: "Age"
+  action: "Actions"
+  delete: "Delete User"
+  insert: "Insert Data"
+  change_language: "Change To Spenish"
 
   activerecord:
+    attributes:
+      user:
+        name: "Name"
+        email: "Email"
+        contact: "Contact"
+        age: "Age"
     errors:
       # The default format to use in full error messages.
       format: "%{attribute} %{message}"

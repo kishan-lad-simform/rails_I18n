@@ -1,17 +1,18 @@
 <div class="container text-center">
 <h2> <%= t(:hello)%> Users </h2>
   <div class="row justify-content-md-center">
-    <%= link_to "#{t '.add_user' }", new_user_path(locale: I18n.locale) %>
+    <%= link_to "#{t(:add_user)}", new_user_path %><br><br>
+    <%= link_to "#{t(:change_language)}", language_path %><br><br>    
     <div class="col">
       <table class="table table-striped">
         <thead>
           <tr>  
-            <th scope="col"> Id </th>
-            <th scope="col"> Name </th>
-            <th scope="col"> Email </th>
-            <th scope="col"> Contact </th>
-            <th scope="col"> Age </th>
-            <th scope="col"> Action </th>     
+            <th scope="col"> <%= t(:id) %> </th>
+            <th scope="col"> <%= t(:name) %> </th>
+            <th scope="col"> <%= t(:email) %> </th>
+            <th scope="col"> <%= t(:contact) %> </th>
+            <th scope="col"> <%= t(:age) %> </th>
+            <th scope="col"> <%= t(:action) %> </th>     
           </tr>
         </thead>
 
@@ -23,10 +24,9 @@
               <td> <%= user.email %> </td>
               <td> <%= user.contact %> </td>
               <td> <%= user.age %> </td>
-              <td> <%= link_to 'Delete', user_path(locale: I18n.locale, id: user),
+              <td> <%= link_to t(:delete), user_path(id: user),
                 data: { 
-                  turbo_method: :delete, 
-                  turbo_confirm: "Confirmation for delete the user"
+                  turbo_method: :delete
                   } ,
                   class: "btn btn-primary" %> 
               </td> 

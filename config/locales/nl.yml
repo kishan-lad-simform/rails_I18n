@@ -1,9 +1,20 @@
 nl: 
   hello: "Hallo"
-  
+  add_user: "Voeg gebruiker toe"
+  id: "ID kaart"
+  name: "Naam"
+  email: "E-mail"
+  contact: "Contact"
+  age: "Leeftijd"
+  action: "Actie"
+  delete: "Verwijder gebruiker"
+  insert: "Invoegen"
+  change_language: "Wijzigen in Engels"
+
   users: 
     index:
       add_user: "Voeg gebruiker toe"
+     
 
   # activerecord:
   #   errors:
@@ -15,6 +26,12 @@ nl:
   #       not_a_number: "is geen getal"
 
   activerecord: 
+    attributes:
+      user:
+        name: "Naam"
+        email: "E-mail"
+        contact: "Contact"
+        age: "Leeftijd"
     errors:
       # The default format to use in full error messages.
       format: "%{attribute} %{message}"
@@ -27,7 +44,7 @@ nl:
         invalid: "is ongeldig" 
         confirmation: "komt niet overeen met %{attribute}"
         accepted: "moet worden geaccepteerd"
-        empty: "can't be empty"
+        empty: "kan niet leeg zijn"
         blank: "kan niet leeg zijn"
         present: "moet leeg zijn"
         too_long:
@@ -37,16 +54,16 @@ nl:
           one: "is te kort (minimaal 1 teken)"
           other: "is te kort (minimum is %{count} tekens)"
         wrong_length:
-          one: "is the wrong length (should be 1 character)"
-          other: "is the wrong length (should be %{count} characters)"
+          one: "is de verkeerde lengte (moet 1 teken zijn)"
+          other: "is de verkeerde lengte (moet %{count} tekens zijn)"
         not_a_number: "is geen getal"
         not_an_integer: "moet een geheel getal zijn"  
-        greater_than: "must be greater than %{count}"
-        greater_than_or_equal_to: "must be greater than or equal to %{count}"
-        equal_to: "must be equal to %{count}"
-        less_than: "must be less than %{count}"
-        less_than_or_equal_to: "must be less than or equal to %{count}"
-        other_than: "must be other than %{count}"
+        greater_than: "moet groter zijn dan %{count}"
+        greater_than_or_equal_to: "moet groter zijn dan of gelijk zijn aan %{count}"
+        equal_to: "moet gelijk zijn aan %{count}"
+        less_than: "moet kleiner zijn dan %{count}"
+        less_than_or_equal_to: "moet kleiner zijn dan of gelijk zijn aan %{count}"
+        other_than: "moet anders zijn dan %{count}"
         in: "moet in %{count} zijn"
-        odd: "must be odd"
-        even: "must be even"
+        odd: "moet vreemd zijn"
+        even: "moet gelijk zijn"
